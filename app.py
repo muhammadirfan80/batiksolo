@@ -97,7 +97,3 @@ def upload_and_save():
         f.write(image_bytes)
 
     return jsonify({'message': 'Gambar berhasil disimpan', 'filename': filename})
-
-# --- Main (hanya untuk lokal) ---
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
