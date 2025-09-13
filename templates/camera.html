@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Batik Solo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Deteksi & Klasifikasi Batik</h1>
+
+    <video id="videoElement" autoplay playsinline></video>
+
+    <div class="controls">
+        <button id="startCameraButton">Mulai Kamera</button>
+        <button id="stopCameraButton">Berhenti Kamera</button>
+        <button id="classifyButton" disabled>Klasifikasi Batik</button>
+    </div>
+
+    <div id="statusMessage">Menunggu aksi...</div>
+
+    <div id="resultsContainer">
+        <p id="modalTopPredictionText">Hasil klasifikasi akan muncul di sini</p>
+        <ul id="modalPredictionList"></ul>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script_camera.js') }}"></script>
+</body>
+</html>

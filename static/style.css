@@ -1,0 +1,153 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+/* Body */
+body {
+    /* Mengganti background menjadi gambar */
+    background-image: url('batik.jpg'); /* ganti dengan path gambar Anda */
+    
+    /* Opsional, agar gambar menutupi seluruh layar */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    color: #333; /* tetap warna teks */
+}
+
+
+/* Container umum */
+.container, .dashboard-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #11b14c;
+}
+
+button:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Video */
+video {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #3498db;
+}
+
+/* Controls */
+.controls {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Status */
+#statusMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Result container */
+#resultsContainer {
+    margin-top: 20px;
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#resultsContainer p {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#resultsContainer ul {
+    list-style: none;
+}
+
+#resultsContainer li {
+    margin-bottom: 8px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Dashboard cards */
+.card {
+    
+background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%; /* otomatis penuh ke kanan sesuai container */
+    box-sizing: border-box; /* agar padding tidak menambah lebar total */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #2052b7;
+}
+
+/* Card content */
+.card h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+}
+
+/* Progress bar container */
+.confidence-bar-container {
+    width: 70%;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.confidence-bar {
+    height: 18px;
+    background: #3498db;
+    text-align: right;
+    line-height: 18px;
+    color: white;
+    border-radius: 8px 0 0 8px;
+    transition: width 0.5s ease;
+}

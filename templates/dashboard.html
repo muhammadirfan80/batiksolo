@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Batik Solo</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="dashboard-container">
+    <h1>Dashboard Batik Solo</h1>
+
+    <div class="cards-container">
+        <div class="card">
+            <h2 id="serverStatus">Sistem Klasifikasi Batik Solo</h2>
+            <p>Batik Parang | Batik truntum | Batik Sidomukti | Batik Sidoasih</p>
+        </div>
+       
+    </div>
+
+    <div style="text-align:center; margin-top:30px;">
+        <button id="startSystemButton">Mulai Sistem Kamera</button>
+    </div>
+</div>
+
+<script>
+document.getElementById('startSystemButton').addEventListener('click', () => {
+    window.location.href = '/camera';
+});
+</script>
+</body>
+</html>
